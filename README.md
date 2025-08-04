@@ -50,6 +50,14 @@ tables = generator.get_available_tables()
 
 # Алиасы полей
 aliases = generator.get_query_aliases("Документ.Поступление")
+
+# Переименование алиасов
+query = generator.generate_query("Справочник.Номенклатура")
+renamed_query = generator.rename_aliases(query, {
+    "Наименование": "Название",
+    "Артикул": "КодАртикула"
+})
+print(renamed_query)
 ```
 
 ## Формат файла маппинга
