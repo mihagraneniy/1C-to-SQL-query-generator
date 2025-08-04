@@ -50,8 +50,10 @@ tables = generator.get_available_tables()
 
 # Алиасы полей
 aliases = generator.get_query_aliases("Документ.Поступление")
+```
 
-# Переименование алиасов
+### Переименование алиасов
+```python
 query = generator.generate_query("Справочник.Номенклатура")
 renamed_query = generator.rename_aliases(query, {
     "Наименование": "Название",
