@@ -55,6 +55,7 @@ aliases = generator.get_query_aliases("Документ.Поступление")
 ### Переименование алиасов
 ```python
 query = generator.generate_query("Справочник.Номенклатура")
+
 renamed_query = generator.rename_aliases(query, {
     "Наименование": "Название",
     "Артикул": "КодАртикула"
